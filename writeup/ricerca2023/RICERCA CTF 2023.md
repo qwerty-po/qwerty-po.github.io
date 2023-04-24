@@ -300,8 +300,8 @@ $$
 theorically, $$2(p_1^2 + p_2^2)2^{512} < 2^{1024+512+1} = 2^{1537}$$
 because of range condition of $$p_1, p_2$$
 
-also, we know that only lower 512bytes of N is fully dependent by $$p_1p_2$$
-furthermore, upper 511 bytes of N is fully dependent by $$p_1p_2$$.
+also, we know that only lower 512bits of N is fully dependent by $$p_1p_2$$
+furthermore, upper 511bits of N is fully dependent by $$p_1p_2$$.
 
 only problem is, we can't determine 1bit of $$p_1p_2$$ but we can bruteforce 1 bit easily~~
 

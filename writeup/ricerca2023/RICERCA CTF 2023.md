@@ -277,12 +277,16 @@ RSA has problem when use weak p or q! I think it is unsafe enough to break RSA.
 Let's make some equations for solve problems
 
 let 
-$$p = p_1 \times 2^{512} + p_2\\
+
+$$
+p = p_1 \times 2^{512} + p_2\\
 q = p_2 \times 2^{512} + p_1\\
 (p_1, q_1 < 2^{512})\\
 $$
+{: .text-center}
 
 then
+
 $$
 \begin{aligned}
 N 
@@ -291,18 +295,19 @@ N
 &= p_1p_2 \times 2^{1024} + 2(p_1^2 + p_2^2)2^{512} + p_1p_2
 \end{aligned}
 $$
+{: .text-center}
 
 theorically, $$2(p_1^2 + p_2^2)2^{512} < 2^{1024+512+1} = 2^{1537}$$
-because of range condition of $p_1, p_2$
+because of range condition of $$p_1, p_2$$
 
-also, we know that only lower 512bytes of N is fully dependent by $p_1p_2$
-furthermore, upper 511 bytes of N is fully dependent by $p_1p_2$.
+also, we know that only lower 512bytes of N is fully dependent by $$p_1p_2$$
+furthermore, upper 511 bytes of N is fully dependent by $$p_1p_2$$.
 
-only problem is, we can't determine 1bit of $p_1p_2$ but we can bruteforce 1 bit easily~~.
+only problem is, we can't determine 1bit of $$p_1p_2$$ but we can bruteforce 1 bit easily~~
 
-then we know $p_1p_2$ and $p_1^2 + p_2^2$ so easily calculate $p_1$ and $p_2$
+then we know $$p_1p_2$$ and $$p_1^2 + p_2^2$$ so easily calculate $$p_1$$ and $$p_2$$
 
-now we know $p$ and $q$ so we can decrypt message.
+now we know $$p$$ and $$q$$ so we can decrypt message.
 
 ```python
 from Crypto.Util.number import long_to_bytes, getPrime, isPrime

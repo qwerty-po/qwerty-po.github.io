@@ -367,8 +367,8 @@ if __name__ == '__main__':
 Usually many programs are programmed that bypass some dirty bytes or padding.
 
 `base64` also same, 
-when we read https://github.com/coreutils/gnulib/blob/master/lib/base64.c#L396,
- we easily find that if some string has padding between string in spicific place, resolve and ignore it.
+when we read [base64.c](https://github.com/coreutils/gnulib/blob/master/lib/base64.c#L396),
+ we find that if some string has padding between string in spicific place, resolve and ignore it.
 
 ```python
 from pwn import *

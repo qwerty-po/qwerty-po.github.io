@@ -6,3 +6,5 @@ description: "writeup"
 permalink: /writeup
 has_children: true
 ---
+
+# Writeups

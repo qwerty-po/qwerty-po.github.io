@@ -7,5 +7,3 @@ permalink: /
 ---
 
 # qwerty's Blog
-
----

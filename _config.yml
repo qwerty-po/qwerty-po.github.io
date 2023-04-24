@@ -182,3 +182,4 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+math: katex
